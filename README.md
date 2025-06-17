@@ -174,7 +174,7 @@ This AirBnB Clone demonstrates the architecture, security, and features required
 
 ---
 
-**👤 Contributors**  
+## 👤 Contributors 
 **Christabel E. Ojobolo**  
 - 🌐 [GitHub: Chrissie22](https://github.com/Chrissie22)  
 - 💼 [LinkedIn: Christabel E. Ojobolo](https://www.linkedin.com/in/christabel-ojobolo)
