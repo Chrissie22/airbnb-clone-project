@@ -48,7 +48,7 @@ This project uses a range of modern technologies to ensure scalability, performa
 
 - **Docker Compose**  
   A tool for defining and running multi-container Docker applications, used to manage the development and testing environment.
-  
+
 ---
 
 ## 👥 Team Roles
@@ -82,52 +82,89 @@ Led quality assurance by writing test cases, performing functional, integration,
 
 ---
 
-## 🗃️ Database Schema Overview
+## 🗃️ Database Design
 
-### 1. `User`
-- `id`  
-- `username`  
-- `email`  
-- `password_hash`  
-- `is_host`  
+The database schema is designed to support core functionalities like user management, property listings, bookings, payments, and reviews. Below are the key entities and their relationships:
 
-**Relation**: Users can own properties and make bookings.
+### 🧑‍💼 Users
+Represents both guests and hosts who interact with the platform.
 
-### 2. `Property`
-- `id`  
-- `owner_id` (FK → User)  
-- `title`  
-- `description`  
-- `location`  
+**Key Fields:**
+- `id`: Unique identifier
+- `username`: User's display name
+- `email`: Contact email
+- `password`: Hashed password
+- `is_host`: Boolean flag to distinguish between guests and hosts
 
-**Relation**: Properties are listed by hosts and reviewed/booked by users.
+**Relationships:**
+- A user can **own multiple properties**
+- A user can **make multiple bookings**
+- A user can **write reviews**
 
-### 3. `Booking`
-- `id`  
-- `user_id` (FK → User)  
-- `property_id` (FK → Property)  
-- `check_in_date`  
-- `check_out_date`  
+---
 
-**Relation**: Bookings link users with properties and trigger payments.
+### 🏡 Properties
+Represents listings available for rent.
 
-### 4. `Payment`
-- `id`  
-- `booking_id` (FK → Booking)  
-- `amount`  
-- `payment_status`  
-- `payment_date`  
+**Key Fields:**
+- `id`: Unique identifier
+- `owner_id`: Foreign key to User
+- `title`: Title of the property
+- `description`: Detailed info
+- `location`: Geographic location
 
-**Relation**: Each booking has an associated payment.
+**Relationships:**
+- A property is **owned by one user**
+- A property can have **many bookings**
+- A property can receive **multiple reviews**
 
-### 5. `Review`
-- `id`  
-- `user_id` (FK → User)  
-- `property_id` (FK → Property)  
-- `rating`  
-- `comment`  
+---
 
-**Relation**: Users can rate and review properties after their stay.
+### 📅 Bookings
+Represents a reservation made by a user for a property.
+
+**Key Fields:**
+- `id`: Unique identifier
+- `user_id`: Foreign key to User
+- `property_id`: Foreign key to Property
+- `check_in_date`: Start date of booking
+- `check_out_date`: End date of booking
+
+**Relationships:**
+- A booking is **linked to one user and one property**
+- Each booking has an **associated payment**
+
+---
+
+### 💳 Payments
+Handles payment details for bookings.
+
+**Key Fields:**
+- `id`: Unique identifier
+- `booking_id`: Foreign key to Booking
+- `amount`: Payment amount
+- `payment_status`: Completed or pending
+- `payment_date`: Date of transaction
+
+**Relationships:**
+- Each payment is **tied to a booking**
+
+---
+
+### ⭐ Reviews
+Allows users to rate and comment on properties after their stay.
+
+**Key Fields:**
+- `id`: Unique identifier
+- `user_id`: Foreign key to User
+- `property_id`: Foreign key to Property
+- `rating`: Numerical score (1–5)
+- `comment`: Text feedback
+
+**Relationships:**
+- A review is **written by a user**
+- A review is **associated with a property**
+
 
 ---
 
