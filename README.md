@@ -18,18 +18,37 @@ The **AirBnB Clone Project** is a comprehensive full-stack web application inspi
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
-| Layer        | Technology                        |
-|--------------|-----------------------------------|
-| Backend      | Django, Django REST Framework     |
-| Database     | PostgreSQL                        |
-| APIs         | RESTful API, GraphQL              |
-| Asynchronous Tasks | Celery                      |
-| Caching      | Redis                             |
-| Containers   | Docker                            |
-| CI/CD        | GitHub Actions, Docker Compose    |
+This project uses a range of modern technologies to ensure scalability, performance, and developer productivity. Below is an overview of the tools and their purposes:
 
+- **Django**  
+  A high-level Python web framework used to build the backend of the application, including business logic, database models, and API endpoints.
+
+- **Django REST Framework (DRF)**  
+  A powerful and flexible toolkit that extends Django for building clean, maintainable RESTful APIs.
+
+- **PostgreSQL**  
+  An open-source relational database used to store structured data such as user profiles, bookings, properties, and reviews.
+
+- **GraphQL**  
+  A query language for APIs that allows clients to request only the data they need, reducing over-fetching and improving performance.
+
+- **Celery**  
+  An asynchronous task queue used to handle background jobs like sending emails and processing time-consuming operations.
+
+- **Redis**  
+  An in-memory data store used alongside Celery for task queuing and also for caching frequently accessed data.
+
+- **Docker**  
+  A containerization tool that packages the application and its dependencies into isolated containers for consistent development and deployment.
+
+- **GitHub Actions**  
+  A CI/CD tool used to automate testing, linting, and deployment pipelines to ensure code quality and continuous delivery.
+
+- **Docker Compose**  
+  A tool for defining and running multi-container Docker applications, used to manage the development and testing environment.
+  
 ---
 
 ## 👥 Team Roles
