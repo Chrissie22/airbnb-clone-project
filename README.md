@@ -32,7 +32,7 @@ The **AirBnB Clone Project** is a comprehensive full-stack web application inspi
 
 ---
 
-## 👥 Team Responsibilities
+## 👥 Team Roles
 
 This project was built through team collaboration across multiple engineering roles. Each role played a critical part in the overall development lifecycle.
 
