@@ -203,19 +203,26 @@ Allows users to rate and comment on properties after their stay.
 
 ---
 
-## 🔐 API Security Highlights
+## 🔐 API Security 
 
 ### 1. **Authentication (JWT)**  
 Only authenticated users can access sensitive endpoints.
 
-### 2. **Role-Based Access Control**  
-Different permissions for Guests, Hosts, and Admins.
+### 2. **Authorization and Role-Based Access Control**  
+- The system uses role-based access control to differentiate between guests, hosts, and admins. 
+- Each role has specific permissions, helping to prevent misuse and ensuring only authorized users can perform certain actions like managing properties or viewing payments.
 
 ### 3. **Rate Limiting**  
 Prevents abuse and denial-of-service attempts.
 
 ### 4. **Data Encryption**  
-All sensitive data is encrypted during transmission (HTTPS) and securely stored.
+All sensitive data is securely stored using a hashing technique and  encrypted during transmission (HTTPS)
+
+### 5. **Input Validation and Sanitization**
+All input data is validated and sanitized to prevent injection attacks such as SQL injection and cross-site scripting (XSS). This ensures the API remains secure from malicious inputs.
+
+### 6. **Secure Error Handling**
+Error responses are generic and avoid revealing sensitive implementation details. This prevents attackers from gaining insights into the backend architecture.
 
 ---
 
