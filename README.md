@@ -52,8 +52,8 @@ Led quality assurance by writing test cases, performing functional, integration,
 
 ## ⚙️ Key Technologies Explained
 
-- **Django**: Robust Python framework powering the backend logic and data models  
-- **Django REST Framework (DRF)**: Extends Django for building clean and powerful REST APIs  
+- **Django**: Robust Python framework useful used to develop the backend logic and data models  
+- **Django REST Framework (DRF)**: Extends Django for building clean and powerful RESTful APIs  
 - **PostgreSQL**: Advanced open-source relational database system  
 - **GraphQL**: Allows clients to fetch precise data, reducing over-fetching  
 - **Celery**: Executes background tasks like emails and notifications  
@@ -174,6 +174,7 @@ This AirBnB Clone demonstrates the architecture, security, and features required
 
 ---
 
-**💡 Want to contribute?**  
-Feel free to fork the repo, open issues, or submit pull requests!
-
+**👤 Contributors**  
+**Christabel E. Ojobolo**  
+- 🌐 [GitHub: Chrissie22](https://github.com/Chrissie22)  
+- 💼 [LinkedIn: Christabel E. Ojobolo](https://www.linkedin.com/in/christabel-ojobolo)
