@@ -168,28 +168,34 @@ Allows users to rate and comment on properties after their stay.
 
 ---
 
-## 🚀 Feature Highlights
+## 🚀 Feature Breakdown
 
-### ✅ User Authentication  
+### 🔐 User Management
 - Registration & login (JWT-based)  
 - Profile roles: Guest or Host  
 - Secure password hashing
 
-### ✅ Property Management  
-- Hosts can create, edit, and delete listings  
-- Location-based search and filtering
+### 🏘️ Property Management 
+- Hosts can create, update, and delete listings  
+- Listings include key details like title, description, location, and images, allowing users to explore rental options easily.
 
-### ✅ Booking Engine  
-- Real-time booking availability  
+### 📅 Booking System
+- Users can view available properties and book them for specific dates. 
 - Conflict prevention on overlapping dates
 
-### ✅ Payment Integration  
+### 💳 Payment Integration  
 - Process and confirm payments securely  
 - Payment status tracking per booking
 
-### ✅ Review System  
+###  ⭐ Review System
 - Star rating (1–5) and text feedback  
 - Display average ratings on listings
+
+### 🔍 Search and Filtering
+- Users can search for properties using keywords, locations, and availability dates. Filters help narrow down results based on price, location, or rating.
+
+### 🛡️ Security Features
+- Includes secure password hashing, role-based access control, and HTTPS enforcement to protect user data and platform integrity.
 
 ### ✅ Developer-Friendly API Docs  
 - REST and GraphQL API auto-generated documentation  
